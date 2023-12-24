@@ -1,6 +1,9 @@
 import Negociacao from './models/negociacao.js'
 
-const negociacao = new Negociacao(new Date(), 10, 100)
-console.log(negociacao)
-negociacao.quantidade = 200
-console.log(negociacao)
+const negociacao = new Negociacao(new Date(), 2, 100)
+
+console.log(negociacao.volume)
+console.log(negociacao.valor)
+console.log(negociacao.data)
+console.log(negociacao.quantidade)
+

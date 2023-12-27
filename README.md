@@ -20,6 +20,7 @@ npx tsc
 
 <h1>Documentation</h1>
 https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+
 https://www.typescriptlang.org/docs/
 
 <h1>Compiler</h1>
@@ -34,8 +35,7 @@ https://www.typescriptlang.org/docs/
         "app/**/*"
     ]
 }
-
->> A propriedade "target" indica para o compilator tsc (TypeScript Compiler) para qual versão do Javascript o código escrito em TypeScript deve ser compilado. Isso significa que o resultado final será arquivos JavaScript sem qualquer referência para a sintaxe do TypeScript.
->> O navegador só entende a linguagem JavaScript, desta maneira, todo código TypeScript precisa ser compilado para uma sintaxe compatível.
->> A propriedade "outDir" indica para onde os arquivos compilados indicados pela propriedade "include" serão salvos.
->> A propriedade "include" indica para o compilador onde estão os arquivos ".ts" que ele deve compilar.
+A propriedade "target" indica para o compilator tsc (TypeScript Compiler) para qual versão do Javascript o código escrito em TypeScript deve ser compilado. Isso significa que o resultado final será arquivos JavaScript sem qualquer referência para a sintaxe do TypeScript.
+O navegador só entende a linguagem JavaScript, desta maneira, todo código TypeScript precisa ser compilado para uma sintaxe compatível.
+A propriedade "outDir" indica para onde os arquivos compilados indicados pela propriedade "include" serão salvos.
+A propriedade "include" indica para o compilador onde estão os arquivos ".ts" que ele deve compilar.

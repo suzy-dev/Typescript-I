@@ -17,3 +17,25 @@ npm yarn pnpm
 All of these dependency managers support lockfiles, ensuring that everyone on your team is using the same version of the language. You can then run the TypeScript compiler using one of the following commands:
 
 npx tsc
+
+<h1>Documentation</h1>
+https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html
+
+https://www.typescriptlang.org/docs/
+
+<h1>Compiler</h1>
+1. Criar file tsconfig.json<br>
+2. Configuração:<br>
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "outDir": "dist/js"
+    },
+    "include": [
+        "app/**/*"
+    ]
+}<br>
+A propriedade "target" indica para o compilator tsc (TypeScript Compiler) para qual versão do Javascript o código escrito em TypeScript deve ser compilado. Isso significa que o resultado final será arquivos JavaScript sem qualquer referência para a sintaxe do TypeScript.<br>
+O navegador só entende a linguagem JavaScript, desta maneira, todo código TypeScript precisa ser compilado para uma sintaxe compatível.<br>
+A propriedade "outDir" indica para onde os arquivos compilados indicados pela propriedade "include" serão salvos.<br>
+A propriedade "include" indica para o compilador onde estão os arquivos ".ts" que ele deve compilar.<br>

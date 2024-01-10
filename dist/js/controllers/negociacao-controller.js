@@ -1,4 +1,4 @@
-export class NegociacaoControler {
+export class NegociacaoController {
     constructor() {
         this.inputQtd = document.querySelector("#quantidade");
         this.inputValor = document.querySelector("#valor");

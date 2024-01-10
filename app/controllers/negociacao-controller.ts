@@ -1,4 +1,4 @@
-export class NegociacaoControler {
+export class NegociacaoController {
     private inputData;
     private inputQtd;
     private inputValor;

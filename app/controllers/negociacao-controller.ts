@@ -1,3 +1,5 @@
+import {Negociacao} from "../models/negociacao.js";
+
 export class NegociacaoController {
     private inputData;
     private inputQtd;
@@ -10,8 +12,11 @@ export class NegociacaoController {
     }
 
     adiciona(){
-        console.log(this.inputQtd)
-        console.log(this.inputData)
-        console.log(this.inputValor)
+       const negociacao = new Negociacao(
+        this.inputData,
+        this.inputQtd,
+        this.inputValor)
+
+        console.log(negociacao)
     }
 }

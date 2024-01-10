@@ -1,4 +1,4 @@
-class Negociacao {
+export class Negociacao {
 
     private _data
     private _quantidade
@@ -23,5 +23,3 @@ class Negociacao {
         return this._quantidade * this._valor
     }
 }
-
-export default Negociacao

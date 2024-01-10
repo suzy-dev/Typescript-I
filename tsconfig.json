@@ -3,6 +3,7 @@
         "outDir":"dist/js",
         "target":"ES6",
         "noEmitOnError": true,
+        "noImplicitAny": true,
         "paths": {
             "undici-types": ["./node_modules/undici-types/index.d.ts"],
         }

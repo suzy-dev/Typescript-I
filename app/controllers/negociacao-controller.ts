@@ -1,9 +1,9 @@
 import {Negociacao} from "../models/negociacao.js";
 
 export class NegociacaoController {
-    private inputData;
-    private inputQtd;
-    private inputValor;
+    private inputData: HTMLInputElement;
+    private inputQtd: HTMLInputElement;
+    private inputValor: HTMLInputElement;
 
     constructor(){
         this.inputQtd = document.querySelector("#quantidade")
@@ -12,10 +12,12 @@ export class NegociacaoController {
     }
 
     adiciona(){
-       const negociacao = new Negociacao(
-        this.inputData,
-        this.inputQtd,
-        this.inputValor)
+        const regexpExec = /-/g
+        const quantidade = parseInt(this.inputQtd.value)
+        const valor = parseFloat(this.inputValor.value)
+        const date = new Date(this.inputData.value.replace(regexpExec,','))
+        const negociacao = new Negociacao(
+           { data: date, quantidade: quantidade, valor: valor })
 
         console.log(negociacao)
     }

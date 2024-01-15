@@ -5,12 +5,22 @@ export class NegociacaoController {
         this.inputValor = document.querySelector("#valor");
         this.inputData = document.querySelector("#data");
     }
-    adiciona() {
+    createNegociacao() {
         const regexpExec = /-/g;
         const quantidade = parseInt(this.inputQtd.value);
         const valor = parseFloat(this.inputValor.value);
         const date = new Date(this.inputData.value.replace(regexpExec, ','));
-        const negociacao = new Negociacao({ data: date, quantidade: quantidade, valor: valor });
+        return new Negociacao({ data: date, quantidade: quantidade, valor: valor });
+    }
+    adiciona() {
+        const negociacao = this.createNegociacao();
         console.log(negociacao);
+        this.clearForm();
+    }
+    clearForm() {
+        this.inputData.value = '';
+        this.inputQtd.value = '';
+        this.inputValor.value = '';
+        this.inputData.focus();
     }
 }
